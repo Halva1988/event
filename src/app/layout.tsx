@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import Container from "@/components/container";
 
 export const metadata: Metadata = {
 	title: "Event Search",
@@ -15,10 +16,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
-				<Header />
-				{children}
-				<Footer />
+			<body className={`bg-zinc-900 text-white`}>
+				<Container>
+					<Header />
+					{children}
+					<Footer />
+				</Container>
 			</body>
 		</html>
 	);
