@@ -1,5 +1,8 @@
-import Link from "next/link";
+"use client";
+
 import Logo from "../logo/logo";
+import { usePathname } from "next/navigation";
+import Navigate from "./navigate";
 
 const links = [
 	{
@@ -13,18 +16,15 @@ const links = [
 ];
 
 const Header = () => {
+	const activePathname = usePathname();
+
 	return (
 		<header className="text-lg flex items-center justify-between px-3 md:px-5 h-14 border-b border-white/20 ">
 			<Logo />
-			<nav>
-				<ul className="flex gap-x-5 text-sm">
+			<nav className="h-full">
+				<ul className="flex gap-x-5 h-full text-sm">
 					{links.map((link, index) => (
-						<li
-							key={index}
-							className="text-white/50 hover:text-white cursor-pointer transition"
-						>
-							<Link href={link.href}>{link.name}</Link>
-						</li>
+						<Navigate key={index} link={link} activePathname={activePathname} />
 					))}
 				</ul>
 			</nav>
