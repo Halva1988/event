@@ -11,7 +11,7 @@ const links = [
 	},
 	{
 		name: "All Events",
-		href: "/events",
+		href: "/events/all",
 	},
 ];
 

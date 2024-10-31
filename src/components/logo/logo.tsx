@@ -1,9 +1,11 @@
-const Logo = () => {
-  return (
-    <h2 className="font-bold">
-      EVENTS
-    </h2>
-  )
-}
+import Link from "next/link";
 
-export default Logo
+const Logo = () => {
+	return (
+		<Link href="/">
+			<h2 className="font-bold">EVENTS</h2>
+		</Link>
+	);
+};
+
+export default Logo;
