@@ -1,5 +1,6 @@
 import EventsList from "@/components/card-list/eventsList";
 import H1 from "@/components/h1";
+import { getCityInPrepositionalCase } from "@/helpers/getCityInPrepositionalCase";
 import { TEvent } from "@/lib/types";
 
 const API_KEY = process.env.API_KEY;
@@ -27,22 +28,8 @@ const EventsPage = async ({ params }: EventsPageProps) => {
 	const events: TEvent[] = data.events;
 
 	const resolvedParams = await params;
-	let { city } = resolvedParams;
-
-	city = decodeURIComponent(city);
-
-	let newCity = city;
-
-	if (city.charAt(city.length - 1) === "а") {
-		newCity = newCity.slice(0, -1) + "е";
-	} else if (city.charAt(city.length - 1) === "ь") {
-		newCity = newCity.slice(0, -1) + "и";
-	} else if (city.toLowerCase() === "нижний новгород") {
-		newCity = "Нижнм Новгороде";
-		city = "Нижний Новгород";
-	} else {
-		newCity = newCity + "е";
-	}
+	
+	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
 
 	return (
 		<main className="flex flex-col items-center min-h-[110vh] px-5 py-24 text-center">
