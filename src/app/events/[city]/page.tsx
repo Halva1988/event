@@ -35,7 +35,7 @@ const EventsPage = async ({ params }: EventsPageProps) => {
 		<main className="flex flex-col items-center min-h-[110vh] px-5 py-24 text-center">
 			<H1>
 				{city === "all"
-					? "All Events"
+					? "Все мероприятия"
 					: `Мероприятия в ${
 							newCity.charAt(0).toUpperCase() + newCity.slice(1)
 					  }`}

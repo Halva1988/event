@@ -8,7 +8,7 @@ type EventsListProps = {
 
 const EventsList = ({ events, city }: EventsListProps) => {
 	return (
-		<section>
+		<section className="max-w-[1100px] flex flex-wrap gap-10 mt-5 justify-center px-[20px]">
 			{events
 				.filter((event) => event.city === city)
 				.map((event) => (
