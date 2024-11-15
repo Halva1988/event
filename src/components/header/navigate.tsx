@@ -7,7 +7,7 @@ type NavigateProps = {
 	activePathname: string;
 };
 
-const Navigate = ({ link, activePathname }: NavigateProps) => {
+const Navigate = ({ link, activePathname }: NavigateProps) => {	
 	const isActive = activePathname === link.href;
 	return (
 		<li
@@ -19,6 +19,7 @@ const Navigate = ({ link, activePathname }: NavigateProps) => {
 				}
 			)}
 		>
+			
 			<Link href={link.href}>{link.name}</Link>
 
 			{isActive && (

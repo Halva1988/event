@@ -8,12 +8,10 @@ type EventsListProps = {
 
 const EventsList = ({ events, city }: EventsListProps) => {
 	return (
-		<section className="max-w-[1100px] flex flex-wrap gap-10 mt-5 justify-center px-[20px]">
-			{events
-				.filter((event) => event.city === city)
-				.map((event) => (
-					<EventCard event={event} key={event.id}/>
-				))}
+		<section className="max-w-[1200px] flex flex-wrap gap-10 mt-10 justify-center px-[20px]">
+			{events.filter((event) => city === "all" || event.city === city).map((event) => (
+				<EventCard event={event} key={event.id}/>
+			))}
 		</section>
 	);
 };
