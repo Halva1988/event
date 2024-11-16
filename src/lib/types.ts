@@ -5,6 +5,7 @@ export type TEvent = {
   city: string;
 	location: string;
 	date: Date;
+	organizer: string;
 	imageUrl: string;
 	description: string;
 };

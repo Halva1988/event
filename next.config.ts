@@ -5,19 +5,19 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "kzngo.ru",
-      },
-      {
-        protocol: "https",
-        hostname: "s.zagranitsa.com",
-      },
-      {
-        protocol: "https",
         hostname: "todes-spb.ru",
       },
       {
         protocol: "https",
         hostname: "kuda-spb.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "kzngo.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "s.zagranitsa.com",
       },
       {
         protocol: "https",
@@ -29,23 +29,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "optim.tildacdn.com",
-      },
-      {
-        protocol: "https",
         hostname: "a-a-ah-ru.s3.amazonaws.com",
       },
       {
         protocol: "https",
-        hostname: "cdn-irec.r-99.com",
-      },
-      {
-        protocol: "https",
-        hostname: "www.ekaterinburgexpo.ru",
-      },
-      {
-        protocol: "https",
-        hostname: "kzn-tur.ru",
+        hostname: "optim.tildacdn.com",
       },
       {
         protocol: "https",
@@ -53,19 +41,87 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "gornovosti.ru",
+        hostname: "kzn-tur.ru",
       },
       {
         protocol: "https",
-        hostname: "krsk.kinoluch.ru",
+        hostname: "мы-с-урала.рф",
       },
       {
         protocol: "https",
-        hostname: "xn--80atesoq.xn--80acgfbsl1azdqr.xn--p1ai",
+        hostname: "cdn.tripster.ru",
       },
       {
         protocol: "https",
-        hostname: "s15.stc.all.kpcdn.net",
+        hostname: "ro.today",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.worldota.net",
+      },
+      {
+        protocol: "https",
+        hostname: "visit-primorye.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "xn-----8kca8cc4agt0f.xn--p1ai",
+      },
+      {
+        protocol: "https",
+        hostname: "vladivostok-city.com",
+      },
+      {
+        protocol: "https",
+        hostname: "samara.travel",
+      },
+      {
+        protocol: "https",
+        hostname: "filarm.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "optim.tildacdn.com",
+      },
+      {
+        protocol: "https",
+        hostname: "kr123.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "chel.dk.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+      {
+        protocol: "https",
+        hostname: "img.tourister.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "gkgz.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "n1s1.hsmedia.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "www.culture.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "tulskieparki.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "www.museum-arms.ru",
+      },
+      {
+        protocol: "https",
+        hostname: "www.pulslive.com",
       },
     ]
   }

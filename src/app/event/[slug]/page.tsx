@@ -11,7 +11,6 @@ const EventSlugPage = async ({ params }: EventsPageProps) => {
 	const data = await getData();
 
 	const eventsInCity = data.filter((event) => event.slug === slug);
-	console.log(eventsInCity);
 
 	return (
 		<main>
@@ -44,12 +43,16 @@ const EventSlugPage = async ({ params }: EventsPageProps) => {
 							})}
 						</p>
 						<h1 className="text-2xl font-bold mb-2 mt-1 ">{eventsInCity[0].name}</h1>
+						<span className="italic text-white/80">{eventsInCity[0].organizer}</span>
 						<p className=" text-xl text-white/75">{eventsInCity[0].location}</p>
 						<button className="bg-white/20 text-lg capitalize bg-blur rounded-md border-2 border-white/10 mt-5 lg:mt-auto w-[95w] py-2 hover:scale-105 focus:scale-105 active:scale-[1.02] transition">Зарегистрироваться</button>
 					</div>
 				</div>
 			</section>
-			<div></div>
+			<div className="text-center">
+				<h2 className="text-2xl font-bold mt-12">Описание</h2>
+				<p className="text-white/75 italic mt-8">{eventsInCity[0].description}</p>
+			</div>
 		</main>
 	);
 };

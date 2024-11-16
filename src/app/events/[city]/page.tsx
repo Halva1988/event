@@ -9,19 +9,13 @@ type EventsPageProps = {
 
 const EventsPage = async ({ params }: EventsPageProps) => {
 	const resolvedParams = await params;
-	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);	
-	
+	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
+
 	const data = await getData();
 
 	return (
 		<main className="flex flex-col items-center min-h-[110vh] px-5 py-24 text-center">
-			<H1>
-				{city === "all"
-					? "Все мероприятия"
-					: `Мероприятия в ${
-							newCity.charAt(0).toUpperCase() + newCity.slice(1)
-					  }`}
-			</H1>
+			<H1>{city === "All" ? "Все мероприятия" : `Мероприятия в ${newCity}`}</H1>
 
 			<EventsList events={data} city={city} />
 		</main>
