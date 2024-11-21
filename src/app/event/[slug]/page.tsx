@@ -31,7 +31,7 @@ const EventSlugPage = async ({ params }: EventsPageProps) => {
 						alt={eventsInCity[0].name}
 						width={350}
 						height={180}
-            className="rounded-xl border-2 border-white/30 object-cover"
+						className="rounded-xl border-2 border-white/30 object-cover"
 					/>
 
 					<div className="flex flex-col">
@@ -42,17 +42,28 @@ const EventSlugPage = async ({ params }: EventsPageProps) => {
 								day: "numeric",
 							})}
 						</p>
-						<h1 className="text-2xl font-bold mb-2 mt-1 ">{eventsInCity[0].name}</h1>
-						<span className="italic text-white/80">{eventsInCity[0].organizer}</span>
-						<p className=" text-xl text-white/75">{eventsInCity[0].location}</p>
-						<button className="bg-white/20 text-lg capitalize bg-blur rounded-md border-2 border-white/10 mt-5 lg:mt-auto w-[95w] py-2 hover:scale-105 focus:scale-105 active:scale-[1.02] transition">Зарегистрироваться</button>
+						<h1 className="text-2xl font-bold mb-2 mt-1 ">
+							{eventsInCity[0].name}
+						</h1>
+						<span className="italic text-white/80">
+							{eventsInCity[0].organizer}
+						</span>
+						<button className="bg-white/20 text-lg capitalize bg-blur rounded-md border-2 border-white/10 mt-5 lg:mt-auto w-[95w] py-2 state-effects">
+							Зарегистрироваться
+						</button>
 					</div>
 				</div>
 			</section>
-			<div className="text-center">
-				<h2 className="text-2xl font-bold mt-12">Описание</h2>
-				<p className="text-white/75 italic mt-8">{eventsInCity[0].description}</p>
-			</div>
+			<section>
+				<h2 className="text-center text-2xl font-bold mt-12">О мероприятии</h2>
+				<p className="text-white/75 text-center italic mt-8">
+					{eventsInCity[0].description}
+				</p>
+			</section>
+			<section className="ml-12 mt-5">
+				<h2 className="text-xl ">Место встречи:</h2>
+				<p className="text-lg italic text-white/75">{eventsInCity[0].location}</p>
+			</section>
 		</main>
 	);
 };

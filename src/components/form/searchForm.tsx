@@ -11,7 +11,7 @@ const SearchForm = () => {
 		e.preventDefault();
 
     if (!searchText) return;
-    
+		
     router.push(`/events/${searchText}`)
 	};
 
