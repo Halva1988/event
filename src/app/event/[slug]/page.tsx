@@ -7,7 +7,6 @@ type EventsPageProps = {
 
 const EventSlugPage = async ({ params }: EventsPageProps) => {
 	const { slug } = await params;
-
 	const data = await getData();
 
 	const eventsInCity = data.filter((event) => event.slug === slug);

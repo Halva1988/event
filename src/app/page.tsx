@@ -7,19 +7,19 @@ const popular: string[] = ["Санкт-Петербург", "Москва"];
 export default function Home() {
 	return (
 		<main className="flex flex-col items-center px-3 pt-36 text-center">
-			<H1>Find events around you</H1>
+			<H1>Найдите мероприятия рядом</H1>
 			<p className="mb-12 mt-7 text-2xl lg:text-3xl opacity-75">
-				Browse more than{" "}
+				Просмотрите более{" "}
 				<span className="text-accent font-bold italic underline">
-					10,000 events
+					10,000 мероприятий
 				</span>{" "}
-				around you
+				рядом с вами
 			</p>
-
+			
 			<SearchForm />
 
 			<section className="mt-4 flex gap-x-4 opacity-50">
-				<p>Popular:</p>
+				<p>Популярные:</p>
 				<div className="space-x-2 font-semibold">
 					{popular.map((city) => (
 						<Link key={city} href={`/events/${decodeURIComponent(city)}`}>

@@ -19,7 +19,7 @@ const SearchForm = () => {
 		<form onSubmit={handleSubmit} className="w-full sm:w-[580px]">
 			<input
 				className="w-full h-16 rounded-lg bg-white/[7%] px-6 outline-none ring-accent/80 duration-500 focus:ring-2 focus:bg-white/10"
-				placeholder="Search events in any city..."
+				placeholder="Поиск мероприятий в городе..."
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
 			/>

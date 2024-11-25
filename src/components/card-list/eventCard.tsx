@@ -17,7 +17,7 @@ const EventCard = ({ event }: EventCardProps) => {
 				alt={event.name}
 				width={350}
 				height={250}
-				className="h-[60%] object-fit"
+				className="h-[60%] object-cover"
 			/>
 			<div className="flex flex-col gap-y-2 justify-center items-center flex-1">
 				<h2 className="text-lg font-semibold">{event.name}</h2>
