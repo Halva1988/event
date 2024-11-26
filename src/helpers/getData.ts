@@ -3,7 +3,7 @@ import { TEvent } from "@/lib/types";
 const API_KEY = process.env.API_KEY;
 const BIN_ID = process.env.BIN_ID;
 
-export async function getData() {
+export async function getData(): Promise<TEvent[]> {
 	try {
 		const headers = new Headers({
 			"X-Master-Key": API_KEY ?? "",

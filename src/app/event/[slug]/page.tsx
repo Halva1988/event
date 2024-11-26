@@ -1,15 +1,28 @@
+import { filterEvents } from "@/helpers/filterEvents";
 import { getData } from "@/helpers/getData";
+import { Metadata } from "next";
 import Image from "next/image";
 
 type EventsPageProps = {
 	params: Promise<{ slug: string }>;
 };
 
+export async function generateMetadata({ params }: EventsPageProps): Promise<Metadata> {
+	const { slug } = await params;
+	const data = await getData();
+
+	const eventsInCity = filterEvents(data, slug);
+
+	return {
+		title: eventsInCity[0].name,
+	};
+}
+
 const EventSlugPage = async ({ params }: EventsPageProps) => {
 	const { slug } = await params;
 	const data = await getData();
 
-	const eventsInCity = data.filter((event) => event.slug === slug);
+	const eventsInCity = filterEvents(data, slug);
 
 	return (
 		<main>
