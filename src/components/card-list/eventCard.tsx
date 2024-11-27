@@ -1,6 +1,7 @@
 "use client";
 
-import { TEvent } from "@/lib/types";
+// import { TEvent } from "@/lib/types";
+import { TEvent } from "@prisma/client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

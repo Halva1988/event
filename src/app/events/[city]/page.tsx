@@ -4,6 +4,7 @@ import { getCityInPrepositionalCase } from "@/helpers/getCityInPrepositionalCase
 import { Suspense } from "react";
 import Loading from "./loading";
 import { Metadata } from "next";
+import { redirect } from "next/navigation";
 
 type EventsPageProps = {
 	params: Promise<{ city: string }>;
@@ -21,6 +22,12 @@ export async function generateMetadata({ params }: EventsPageProps): Promise<Met
 const EventsPage = async ({ params }: EventsPageProps) => {
 	const resolvedParams = await params;
 	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
+	
+	if (!newCity && city !== "All") {
+		return (
+			redirect('/not-found')
+		);
+	};
 	
 	return (
 		<main className="flex flex-col items-center min-h-[110vh] px-5 py-24 text-center">

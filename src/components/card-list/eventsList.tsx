@@ -1,13 +1,14 @@
-import { TEvent } from "@/lib/types";
+import { TEvent } from "@prisma/client";
 import EventCard from "./eventCard";
-import { getData } from "@/helpers/getData";
+import { getAllEvents } from "../../../prisma/seed";
 
 type EventsListProps = {
 	city: string;
 };
 
 const EventsList = async ({ city }: EventsListProps) => {
-  const events: TEvent[] = await getData();
+  const events: TEvent[] = await getAllEvents();
+	 
 	return (
 		<section className="max-w-[1200px] flex flex-wrap gap-10 mt-10 justify-center px-[20px]">
 			{events.filter((event) => city === "All" || event.city === city).map((event) => (

@@ -3,11 +3,11 @@ import Link from "next/link";
 const links = [
 	{
 		name: "Terms & Conditions",
-		href: "/terms-conditions",
+		href: "/terms",
 	},
 	{
 		name: "Privacy Policy",
-		href: "/privacy-policy",
+		href: "/privacy",
 	},
 ];
 
