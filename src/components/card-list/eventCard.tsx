@@ -47,10 +47,10 @@ const EventCard = ({ event }: EventCardProps) => {
 					height={250}
 					className="h-[60%] object-cover"
 				/>
-				<div className="flex flex-col gap-y-2 justify-center items-center flex-1">
+				<div className="flex flex-col gap-y-2 justify-center items-center flex-1 pb-3 px-3">
 					<h2 className="text-lg font-semibold">{event.name}</h2>
 					<p className="text-sm italic text-white/75">{event.location}</p>
-					<p className="text-xs px-1 text-white/50 mt-4">{shortDescription}</p>
+					<p className="text-xs px-1 text-white/50 mt-3">{shortDescription}</p>
 				</div>
 				<section className="absolute flex flex-col items-center justify-center font-bold left-[12px] top-[12px] w-[45px] h-[45px] bg-black/70 rounded-md">
 					<p className="text-xl -mb-[5px]">
