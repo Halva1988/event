@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 
 type EventsPageProps = {
 	params: Promise<{ city: string }>;
+	searchParams: { page: string };
 };
 
 export async function generateMetadata({ params }: EventsPageProps): Promise<Metadata> {
@@ -19,9 +20,12 @@ export async function generateMetadata({ params }: EventsPageProps): Promise<Met
 	};
 }
 
-const EventsPage = async ({ params }: EventsPageProps) => {
+const EventsPage = async ({ params, searchParams: searchParamsPromise }: EventsPageProps) => {
+	const searchParams = await searchParamsPromise;
 	const resolvedParams = await params;
 	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
+	const page = searchParams.page ?? "1";
+	
 	
 	if (!newCity && city !== "All") {
 		return notFound();
@@ -32,7 +36,7 @@ const EventsPage = async ({ params }: EventsPageProps) => {
 			<H1>{city === "All" ? "Все мероприятия" : `Мероприятия в ${newCity}`}</H1>
 
 			<Suspense fallback={<Loading />}>
-				<EventsList city={city} />
+				<EventsList city={city} page={page} />
 			</Suspense>
 		</main>
 	);
