@@ -4,7 +4,7 @@ import { getCityInPrepositionalCase } from "@/helpers/getCityInPrepositionalCase
 import { Suspense } from "react";
 import Loading from "./loading";
 import { Metadata } from "next";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 type EventsPageProps = {
 	params: Promise<{ city: string }>;
@@ -24,9 +24,7 @@ const EventsPage = async ({ params }: EventsPageProps) => {
 	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
 	
 	if (!newCity && city !== "All") {
-		return (
-			redirect('/not-found')
-		);
+		return notFound();
 	};
 	
 	return (

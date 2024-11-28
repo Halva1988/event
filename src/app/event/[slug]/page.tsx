@@ -1,7 +1,7 @@
 import { getSlugEvent } from "@/lib/db";
 import { Metadata } from "next";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 type EventsPageProps = {
 	params: Promise<{ slug: string }>;
@@ -23,7 +23,7 @@ const EventSlugPage = async ({ params }: EventsPageProps) => {
 	const eventsInCity = await getSlugEvent(slug);
 
 	if (!eventsInCity) {
-		return redirect("/not-found");
+		return notFound
 	}
 
 	return (
