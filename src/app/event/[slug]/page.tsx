@@ -1,6 +1,6 @@
+import { getSlugEvent } from "@/lib/db";
 import { Metadata } from "next";
 import Image from "next/image";
-import { getSlugEvent } from "../../../../prisma/seed";
 import { redirect } from "next/navigation";
 
 type EventsPageProps = {

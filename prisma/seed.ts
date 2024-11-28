@@ -1,4 +1,4 @@
-import { PrismaClient, TEvent } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 const events = [
@@ -400,6 +400,7 @@ async function main() {
 	};
 }
 
+
 main()
 	.then(async () => {
 		await prisma.$disconnect();
@@ -410,5 +411,3 @@ main()
 		process.exit(1);
 	});
 
-export const getAllEvents = async (): Promise<TEvent[]> => prisma.tEvent.findMany();
-export const getSlugEvent = async (slug: string): Promise<TEvent | null>=> prisma.tEvent.findUnique({ where: { slug } });
