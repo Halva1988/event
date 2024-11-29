@@ -28,3 +28,14 @@ export const getAllEvents = async (page = "1") => {
 
 export const getSlugEvent = async (slug: string): Promise<TEvent | null> =>
 	prisma.tEvent.findUnique({ where: { slug } });
+
+export const getCityEvents = async (city: string, page = "1") => {
+	const cityEvents = await prisma.tEvent.findMany({
+		where: { city },
+		orderBy: { date: "desc" },
+		take: 6,
+		skip: (Number(page) - 1) * 6,
+	});
+	const totalCountCity = await prisma.tEvent.count({ where: { city } });
+	return { cityEvents, totalCountCity };
+}

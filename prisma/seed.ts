@@ -14,11 +14,75 @@ const events = [
 			"https://todes-spb.ru/cache/images/1_1024x1024_205320afacca866598c2f5eea6bef3b1.jpg",
 		description:
 			"Приглашаем всех желающих на открытый урок танцев. Вы научитесь основным движениям популярных стилей: сальса, хип-хоп и классический вальс.",
+	},{
+		id: 1121,
+		name: "Открытый урок танцев",
+		slug: "otkrytyy-urok-tantsev6",
+		city: "Санкт-Петербург",
+		location: "Танцевальная школа 'Танцы SPB'",
+		date: "2023-12-05T00:00:00+03:00",
+		organizer: "Компания 'Dance Life Studio'",
+		imageUrl:
+			"https://todes-spb.ru/cache/images/1_1024x1024_205320afacca866598c2f5eea6bef3b1.jpg",
+		description:
+			"Приглашаем всех желающих на открытый урок танцев. Вы научитесь основным движениям популярных стилей: сальса, хип-хоп и классический вальс.",
+	},
+	{
+		id: 121,
+		name: "Открытый урок танцев",
+		slug: "otkrytyy-urok-tantsev4",
+		city: "Санкт-Петербург",
+		location: "Танцевальная школа 'Танцы SPB'",
+		date: "2023-12-05T00:00:00+03:00",
+		organizer: "Компания 'Dance Life Studio'",
+		imageUrl:
+			"https://todes-spb.ru/cache/images/1_1024x1024_205320afacca866598c2f5eea6bef3b1.jpg",
+		description:
+			"Приглашаем всех желающих на открытый урок танцев. Вы научитесь основным движениям популярных стилей: сальса, хип-хоп и классический вальс.",
+	},
+	{
+		id: 111,
+		name: "Открытый урок танцев",
+		slug: "otkrytyy-urok-tantsev3",
+		city: "Санкт-Петербург",
+		location: "Танцевальная школа 'Танцы SPB'",
+		date: "2023-12-05T00:00:00+03:00",
+		organizer: "Компания 'Dance Life Studio'",
+		imageUrl:
+			"https://todes-spb.ru/cache/images/1_1024x1024_205320afacca866598c2f5eea6bef3b1.jpg",
+		description:
+			"Приглашаем всех желающих на открытый урок танцев. Вы научитесь основным движениям популярных стилей: сальса, хип-хоп и классический вальс.",
+	},
+	{
+		id: 11,
+		name: "Открытый урок танцев",
+		slug: "otkrytyy-urok-tantsev2",
+		city: "Санкт-Петербург",
+		location: "Танцевальная школа 'Танцы SPB'",
+		date: "2023-12-05T00:00:00+03:00",
+		organizer: "Компания 'Dance Life Studio'",
+		imageUrl:
+			"https://todes-spb.ru/cache/images/1_1024x1024_205320afacca866598c2f5eea6bef3b1.jpg",
+		description:
+			"Приглашаем всех желающих на открытый урок танцев. Вы научитесь основным движениям популярных стилей: сальса, хип-хоп и классический вальс.",
 	},
 	{
 		id: 2,
 		name: "Концерт классической музыки",
 		slug: "koncert-klassicheskoy-muzyki",
+		city: "Санкт-Петербург",
+		location: "Большой концертный зал 'Октябрьский'",
+		date: "2023-12-05T00:00:00+03:00",
+		organizer: "Музыкальная ассоциация 'Классика в XXI веке'",
+		imageUrl:
+			"https://kuda-spb.ru/uploads/0d11da5cba895db5191ad4cb03b70558.jpg",
+		description:
+			"Уникальная возможность насладиться классической музыкой в исполнении мировых звезд.",
+	},
+	{
+		id: 222,
+		name: "Концерт классической музыки",
+		slug: "koncert-klassicheskoy-muzyki354",
 		city: "Санкт-Петербург",
 		location: "Большой концертный зал 'Октябрьский'",
 		date: "2023-12-05T00:00:00+03:00",
@@ -410,4 +474,3 @@ main()
 		await prisma.$disconnect();
 		process.exit(1);
 	});
-
