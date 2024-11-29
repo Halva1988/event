@@ -24,8 +24,11 @@ const EventsPage = async ({ params, searchParams: searchParamsPromise }: EventsP
 	const searchParams = await searchParamsPromise;
 	const resolvedParams = await params;
 	const { newCity, city } = getCityInPrepositionalCase(resolvedParams);
-	const page = searchParams.page ?? "1";
+	const page = searchParams.page || "1";
 	
+	if (+page <= 0) {
+		throw new Error("Invalid page number");
+	}
 	
 	if (!newCity && city !== "All") {
 		return notFound();
@@ -35,7 +38,7 @@ const EventsPage = async ({ params, searchParams: searchParamsPromise }: EventsP
 		<main className="flex flex-col items-center min-h-[110vh] px-5 py-24 text-center">
 			<H1>{city === "All" ? "Все мероприятия" : `Мероприятия в ${newCity}`}</H1>
 
-			<Suspense fallback={<Loading />}>
+			<Suspense key={city + +page} fallback={<Loading />}>
 				<EventsList city={city} page={page} />
 			</Suspense>
 		</main>

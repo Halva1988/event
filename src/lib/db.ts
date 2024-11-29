@@ -25,5 +25,6 @@ export const getAllEvents = async (page = "1") => {
 	const totalCount = await prisma.tEvent.count();
 	return { events, totalCount };
 };
+
 export const getSlugEvent = async (slug: string): Promise<TEvent | null> =>
 	prisma.tEvent.findUnique({ where: { slug } });
